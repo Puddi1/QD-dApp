@@ -2,8 +2,8 @@
 let provider = new ethers.providers.Web3Provider(window.ethereum);
 let diamondAddress = "0xB070F8536ce64EbCa7525cde737128A1FCcCE3f2";
 
-import FirstAvalancheValidatorFacet from "../artifacts/contracts/validator/facets/FirstAvalancheValidatorFacet.sol/FirstAvalancheValidatorFacet.json" assert {type: 'json'};;
-import FirstAvalancheValidatorSettersAndGettersFacet from "../artifacts/contracts/validator/facets/FirstAvalancheValidatorSettersAndGettersFacet.sol/FirstAvalancheValidatorSettersAndGettersFacet.json" assert {type: 'json'};
+import FirstAvalancheValidatorFacet from "../artifacts/contracts/validator/facets/FirstAvalancheValidatorFacet.sol/FirstAvalancheValidatorFacet.json" assert {type: 'application/json'};;
+import FirstAvalancheValidatorSettersAndGettersFacet from "../artifacts/contracts/validator/facets/FirstAvalancheValidatorSettersAndGettersFacet.sol/FirstAvalancheValidatorSettersAndGettersFacet.json" assert {type: 'application/json'};
 let _FirstAvalancheValidatorFacet = new ethers.Contract(diamondAddress, FirstAvalancheValidatorFacet.abi, provider);
 let _FirstAvalancheValidatorSettersAndGettersFacet = new ethers.Contract(diamondAddress, FirstAvalancheValidatorSettersAndGettersFacet.abi, provider);
 

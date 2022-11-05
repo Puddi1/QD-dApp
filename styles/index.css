@@ -1,0 +1,200 @@
+/* Main Div */
+#mainDiv {
+    position: relative;
+    display: grid;
+    height: 100%;
+}
+/* Logo Avax QD Div */
+#logoAvaxQDDiv {
+    z-index: 1;
+    position: relative;
+    display: table;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+/* Logo Avax QD */
+.logoAvaxQD {
+    z-index: 1;
+    display: table-cell;
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+}
+
+/* Icons */
+.marketplace,
+.liquidDelegating,
+.user,
+.liquidStaking,
+.redeem,
+.levelUp,
+.stats,
+.unactiveUser
+{
+    z-index: 2;
+    position: absolute;
+    margin: 0;
+    opacity: 0;
+    transition: 0.75s ease-out;
+}
+.marketplace:hover,
+.liquidDelegating:hover,
+.user:hover,
+.liquidStaking:hover,
+.redeem:hover,
+.levelUp:hover,
+.stats:hover,
+.unactiveUser:hover
+{
+    opacity: 1;
+}
+.marketplace {
+    height: 10%;
+    top: 11.5%;
+    left: 45.25%;
+}
+.liquidDelegating {
+    height: 16%;
+    top: 43%;
+    left: 57%;
+}
+.user {
+    height: 7%;
+    top: 34.5%;
+    left: 47.25%;
+}
+.liquidStaking {
+    height: 16%;
+    top: 42.7%;
+    left: 27.5%;
+}
+.redeem {
+    height: 9%;
+    top: 80.5%;
+    left: 13.6%;
+}
+
+.levelUp {
+    height: 9%;
+    top: 80.5%;
+    left: 34.3%;
+}
+.stats {
+    height: 8%;
+    top: 80.5%;
+    left: 56.3%;
+}
+.unactiveUser {
+    height: 9%;
+    top: 80%;
+    left: 80.5%;
+}
+
+
+/* Media Query for touch screens */
+@media screen and (max-width: 700px) {
+    /* #logoAvaxQDDiv {
+        top: 30%;  Check best %, even worth it?
+    } */
+    .marketplace,
+    .liquidDelegating,
+    .user,
+    .liquidStaking,
+    .redeem,
+    .levelUp,
+    .stats,
+    .unactiveUser
+    {
+        opacity: 1;
+    }
+}
+
+/* Background */
+/* Global variables */
+:root {
+    --color-bg: hsl(0, 0%, 0%);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+/* Environment */
+#background {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg);
+}
+
+/* Animated Background */
+/* Bottom */
+#retrobg {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+#retrobg-ground {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background-color: #000;
+}
+#retrobg-groundShadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( rgb(50, 0, 0) 0%, transparent );
+}
+
+#retrobg-linesWrap {
+    height: 100%;
+    perspective: 1000px;
+    perspective-origin: center top;
+}
+#retrobg-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: top center;
+    animation: 6s linear infinite retrobg-lines-anim;
+}
+@keyframes retrobg-lines-anim {
+    from { transform: rotateX( 84deg ) translateY( 0 ); }
+    to { transform: rotateX( 84deg ) translateY( 100px ); }
+}
+#retrobg-hlines,
+#retrobg-vlines {
+    position: absolute;
+    left: calc( ( 900% - 100% ) / -2 );
+    width: 900%;
+    height: 500%;
+}
+#retrobg-vlines {
+    display: flex;
+    justify-content: center;
+}
+.retrobg-hline,
+.retrobg-vline {
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+}
+.retrobg-hline { height: 3px; }
+.retrobg-vline { width: 3px; }
+.retrobg-hline + .retrobg-hline { margin-top: 98px; }
+.retrobg-vline + .retrobg-vline { margin-left: 48px; }

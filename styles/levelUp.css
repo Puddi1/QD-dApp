@@ -1,0 +1,302 @@
+/* Main div */
+#mainDiv {
+    z-index: 1;
+    position: relative;
+    display: grid;
+    gap: 0.5rem;
+    height: 100vh;
+    grid-template-rows: auto 22% 22% 22% 22%;
+}
+
+/* Main Div */
+#metamaskButtonMainDiv {
+    position: relative;
+    display: table;
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+    max-height: 100vh;
+}
+#level1MainDiv {
+    position: relative;
+}
+#level2MainDiv {
+    position: relative;
+}
+#level3MainDiv {
+    position: relative;
+}
+#level4MainDiv {
+    position: relative;
+}
+
+/* Metamask */
+.metamaskButton {
+    position: absolute;
+    display: table-cell;
+    top: 30%;
+    left: 88.5%;
+    width: 10%;
+    height: 90%;
+    max-width: 100%; 
+    max-height: 100vh;
+    border: 3px solid white;
+    color: white;
+    overflow: hidden;
+    background-color: transparent;
+    cursor: pointer;
+    transition: 0.75s ease-out;
+}
+.metamaskIcon {
+    height: 70%;
+    width: 45%;
+    transition: 0.75s ease-out;
+}
+.metamaskButton:hover,
+.metamaskIcon:hover
+{
+    filter: drop-shadow(0px 0px 8px red);
+}
+.emptyWhiteAvaxLogo {
+    position: absolute;
+    display: table-cell;
+    height: 120%;
+    max-width: 100%; 
+    max-height: 100vh;
+    left: 47.4%;
+    top: 40%;
+}
+
+/* Levels */
+.level1beforeText {
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 30%;
+    left: 30%;
+    margin: 0;
+}
+.level2beforeText {
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 30%;
+    left: 30%;
+    margin: 0;
+}
+.level3beforeText {
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 30%;
+    left: 30%;
+    margin: 0;
+}
+.level4beforeText {
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 18.5%;
+    left: 30%;
+    margin: 0;
+}
+.level1Icon,
+.level2Icon,
+.level3Icon,
+.level4Icon
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 34.45%;
+    width: 15%;
+    max-width: 100%;
+    max-height: 100vh;
+    cursor: pointer;
+    transition: 0.75s ease-out;
+}
+.level4Icon {
+    top: 34%;
+}
+.level1Icon:hover,
+.level2Icon:hover,
+.level3Icon:hover,
+.level4Icon:hover
+{
+    filter: drop-shadow(0px 0px 8px red);
+}
+.level1afterText {
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    left: 67%;
+    top: 30%;
+    margin: 0;
+    transition: 0.75s;
+}
+.level1afterText:hover {
+    filter: drop-shadow(0px 0px 8px red);
+}
+.level2afterText {
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    left: 67%;
+    top: 30%;
+    margin: 0;
+    transition: 0.75s;
+}
+.level2afterText:hover {
+    filter: drop-shadow(0px 0px 8px red);
+}
+.level3afterText {
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    left: 67%;
+    top: 30%;
+    margin: 0;
+    transition: 0.75s;
+}
+.level3afterText:hover {
+    filter: drop-shadow(0px 0px 8px red);
+}
+.level4afterText {
+    position: absolute;
+    color: white;
+    font-size: 4vw;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 18.5%;
+    left: 67%;
+    margin: 0;
+    transition: 0.75s;
+}
+.level4afterText:hover {
+    filter: drop-shadow(0px 0px 8px red);
+}
+
+@media screen and (max-width: 700px) {
+    /* Metamask */
+    .metamaskButton {
+        top: 30%;
+        left: 73%;
+        width: 25%;
+    }
+    .metamaskIcon {
+        width: 80%;
+    }
+    .emptyWhiteAvaxLogo {
+        left: 42.6%;
+        top: 39%;
+    }
+    /* text */
+    .level1afterText,
+    .level2afterText,
+    .level3afterText,
+    .level4afterText {
+        font-size: 7vw;
+        left: 75%;
+    }
+    .level1beforeText,
+    .level2beforeText,
+    .level3beforeText,
+    .level4beforeText  {
+        font-size: 7vw;
+        left: 20%;
+    }
+}
+
+/* Background */
+/* Global variables */
+:root {
+    --color-bg: hsl(0, 0%, 0%);
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+/* Environment */
+#background {
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg);
+}
+
+/* Animated Background */
+/* Bottom */
+#retrobg {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    background-color: black;
+}
+
+#retrobg-ground {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background-color: #000;
+}
+#retrobg-groundShadow {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient( rgb(50, 0, 0) 0%, transparent );
+}
+
+#retrobg-linesWrap {
+    height: 100%;
+    perspective: 1000px;
+    perspective-origin: center top;
+}
+#retrobg-lines {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-origin: top center;
+    animation: 6s linear infinite retrobg-lines-anim;
+}
+@keyframes retrobg-lines-anim {
+    from { transform: rotateX( 84deg ) translateY( 0 ); }
+    to { transform: rotateX( 84deg ) translateY( 100px ); }
+}
+#retrobg-hlines,
+#retrobg-vlines {
+    position: absolute;
+    left: calc( ( 900% - 100% ) / -2 );
+    width: 900%;
+    height: 500%;
+}
+#retrobg-vlines {
+    display: flex;
+    justify-content: center;
+}
+.retrobg-hline,
+.retrobg-vline {
+    width: 100%;
+    height: 100%;
+    background-color: currentColor;
+}
+.retrobg-hline { height: 3px; }
+.retrobg-vline { width: 3px; }
+.retrobg-hline + .retrobg-hline { margin-top: 98px; }
+.retrobg-vline + .retrobg-vline { margin-left: 48px; }

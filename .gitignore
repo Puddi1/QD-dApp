@@ -11,13 +11,13 @@ node_modules
 dist-ssr
 *.local
 artifacts
-levelUp
-manageUser
+./levelUp
+./manageUser
 public
-user
-index.html
-main.js
-style.css
+./user
+./index.html
+./main.js
+./style.css
 
 # Editor directories and files
 .vscode/*

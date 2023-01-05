@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../logoColoredQD.svg" sizes="any" type="image/svg+xml">
+    <title>QuarryDraw - Level Up</title>
+
+    <script type="module" src="./main.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Menu -->
+    <!-- Toggle button -->
+    <div id="toggle-button">
+        <div id="top-bar" class="bar"></div>
+        <div id="center-bar" class="bar"></div>
+        <div id="bottom-bar" class="bar"></div>
+    </div>
+      
+    <!-- Sidebar menu -->
+    <div id="sidebar">
+        <ul id="sidebar-ul">
+            <div class="imageSidebar-container">
+                <img id="home-sidebar" src="../logoAvaxQD.svg" alt="Home">
+            </div>
+            <a href="../index.html"><li>Home</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="user-sidebar" src="../icons/userLandingIcon.svg" alt="User">
+            </div>
+            <a href="../user/index.html"><li id="sidebar-userPlaceholder">User</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="manageUser-sidebar" src="../icons/manageUserLandingIcon.svg" alt="Manager User">
+            </div>
+            <a href="../manageUser/index.html"><li>Manage User</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="levelUp-sidebar" src="../icons/levelUpLandingIcon.svg" alt="Level Up">
+            </div>
+            <a href="#"><li>Level Up</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="liquidDelegating-sidebar" src="../icons/liquidDelegatingLandingIcon.svg" alt="Liquid delegating vault">
+            </div>
+            <a href="#"><li>█ED█C██D</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="liquidStaking-sidebar" src="../icons/liquidStakingLandingIcon.svg" alt="Liquid staking vault">
+            </div>
+            <a href="#"><li>R█D██T█D</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="marketplace-sidebar" src="../icons/marketplaceLandingIcon.svg" alt="Marketplace">
+            </div>
+            <a href="#"><li>█ED█C█E█</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="redeem-sidebar" src="../icons/redeemLandingIcon.svg" alt="Redeem dashboard">
+            </div>
+            <a href="#"><li>R█D██TE█</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="stats-sidebar" src="../icons/statsLandingIcon.svg" alt="Statistics dashboard">
+            </div>
+            <a href="#"><li>█ED█C█E█</li></a>
+        </ul>
+    </div>
+    
+    <main id="main">
+        <div id="metamask-container">
+            <button id="button-metamask">
+                <img id="metamask" src="../icons/metamaskIcon.svg" alt="Reward Icon">
+            </button>
+        </div>
+
+        <div id="dashboard-container">
+            <div id="coverLayout">
+                <div id="balance-container">
+                    <h1 id="balance">Balances</h1>
+                </div>
+                <div id="upgradeIcon-container">
+                    <img id="upgradeIcon" src="../icons/levelUpIcon.svg" alt="Level Up Icon">
+                </div>
+                <div id="upgrades-container">
+                    <h1 id="upgrades">Upgrades</h1>
+                </div>
+
+                <div id="balance-level1-container">
+                    <p id="balanceText-level1" class="balanceText">/</p>
+                </div>
+                <div id="balance-level2-container">
+                    <p id="balanceText-level2" class="balanceText">/</p>
+                </div>
+                <div id="balance-level3-container">
+                    <p id="balanceText-level3" class="balanceText">/</p>
+                </div>
+                <div id="balance-level4-container">
+                    <p id="balanceText-level4" class="balanceText">/</p>
+                </div>
+                <div id="balance-level5-container">
+                    <p id="balanceText-level5" class="balanceText">/</p>
+                </div>
+
+                <div id="level1-MinusPlus-container">
+                    <span id="minusLevel1" class="minus">-</span>
+                    <span id="plusLevel1" class="plus">+</span>
+                </div>
+                <div id="level2-MinusPlus-container">
+                    <span id="minusLevel2" class="minus">-</span>
+                    <span id="plusLevel2" class="plus">+</span>
+                </div>
+                <div id="level3-MinusPlus-container">
+                    <span id="minusLevel3" class="minus">-</span>
+                    <span id="plusLevel3" class="plus">+</span>
+                </div>
+                <div id="level4-MinusPlus-container">
+                    <span id="minusLevel4" class="minus">-</span>
+                    <span id="plusLevel4" class="plus">+</span>
+                </div>
+
+                <div id="upgrades-level1-container">
+                    <p id="upgradeText-level1" class="upgradesText">0</p>
+                </div>
+                <div id="upgrades-level2-container">
+                    <p id="upgradeText-level2" class="upgradesText">0</p>
+                </div>
+                <div id="upgrades-level3-container">
+                    <p id="upgradeText-level3" class="upgradesText">0</p>
+                </div>
+                <div id="upgrades-level4-container">
+                    <p id="upgradeText-level4" class="upgradesText">0</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="background">
+        <!-- Animated Background -->
+        <!-- Bottom -->
+        <div id="retrobg">
+            <div id="retrobg-ground">
+                <div id="retrobg-linesWrap">
+                    <div id="retrobg-lines">
+                        <div id="retrobg-vlines">
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                        </div>
+                        <div id="retrobg-hlines">
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="retrobg-groundShadow"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

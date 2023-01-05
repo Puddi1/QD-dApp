@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../logoColoredQD.svg" sizes="any" type="image/svg+xml">
+    <title>QuarryDraw - Manage User</title>
+
+    
+    
+  <script type="module" crossorigin src="../assets/manageUser-6e2aff6a.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-ec808ebb.js">
+  <link rel="modulepreload" crossorigin href="../assets/AvalancheValidatorSettersAndGettersFacet-44779d00.js">
+  <link rel="modulepreload" crossorigin href="../assets/web3-provider-fa690591.js">
+  <link rel="stylesheet" href="../assets/index-e7ae7fc9.css">
+</head>
+<body>
+    <!-- Menu -->
+    <!-- Toggle button -->
+    <div id="toggle-button">
+        <div id="top-bar" class="bar"></div>
+        <div id="center-bar" class="bar"></div>
+        <div id="bottom-bar" class="bar"></div>
+    </div>
+      
+    <!-- Sidebar menu -->
+    <div id="sidebar">
+        <ul id="sidebar-ul">
+            <div class="imageSidebar-container">
+                <img id="home-sidebar" src="../logoAvaxQD.svg" alt="Home">
+            </div>
+            <a href="../index.html"><li>Home</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="user-sidebar" src="../icons/userLandingIcon.svg" alt="User">
+            </div>
+            <a href="../user/index.html"><li id="sidebar-userPlaceholder">User</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="manageUser-sidebar" src="../icons/manageUserLandingIcon.svg" alt="Manager User">
+            </div>
+            <a href="#"><li>Manage User</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="levelUp-sidebar" src="../icons/levelUpLandingIcon.svg" alt="Level Up">
+            </div>
+            <a href="../levelUp/index.html"><li>Level Up</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="liquidDelegating-sidebar" src="../icons/liquidDelegatingLandingIcon.svg" alt="Liquid delegating vault">
+            </div>
+            <a href="#"><li>█ED█C██D</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="liquidStaking-sidebar" src="../icons/liquidStakingLandingIcon.svg" alt="Liquid staking vault">
+            </div>
+            <a href="#"><li>R█D██T█D</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="marketplace-sidebar" src="../icons/marketplaceLandingIcon.svg" alt="Marketplace">
+            </div>
+            <a href="#"><li>█ED█C█E█</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="redeem-sidebar" src="../icons/redeemLandingIcon.svg" alt="Redeem dashboard">
+            </div>
+            <a href="#"><li>R█D██TE█</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="stats-sidebar" src="../icons/statsLandingIcon.svg" alt="Statistics dashboard">
+            </div>
+            <a href="#"><li>█ED█C█E█</li></a>
+        </ul>
+    </div>
+    
+    <main>
+        <div id="metamask-container">
+            <button id="button-metamask" on:click={connectUser}>
+                <img id="metamaskIcon" id="metamask" src="../icons/metamaskIcon.svg" alt="Reward Icon">
+            </button>
+        </div>
+
+        <div id="avalanche-container">
+            <img id="avalanche" src="../emptyWhiteAvaxLogo.svg" alt="Logo Avalanche">
+        </div>
+
+        <div id="manager-container">
+            <input id="address-input" type="text" name="Address" placeholder="Address">
+
+            <form id="manager-level-container">
+                <div id="level1-container">
+                    <input type="radio" name="level" value="1" id="level1">
+                    <label class="checkbox-label" for="level1">1</label>
+                </div>
+                <div id="level2-container">
+                    <input type="radio" name="level" value="2" id="level2">
+                    <label class="checkbox-label" for="level2">2</label>
+                </div>
+                <div id="level3-container">
+                    <input type="radio" name="level" value="3" id="level3">
+                    <label class="checkbox-label" for="level3">3</label>
+                </div>
+                <div id="level4-container">
+                    <input type="radio" name="level" value="4" id="level4">
+                    <label class="checkbox-label" for="level4">4</label>
+                </div>
+                <div id="level5-container">
+                    <input type="radio" name="level" value="5" id="level5">
+                    <label class="checkbox-label" for="level5">5</label>
+                </div>
+            </form>
+            
+            <button id="manage-button">
+                <strong id="manageText">MANAGE</strong>
+            </button>
+        </div>
+    </main>
+
+    <div id="background">
+        <!-- Animated Background -->
+        <!-- Bottom -->
+        <div id="retrobg">
+            <div id="retrobg-ground">
+                <div id="retrobg-linesWrap">
+                    <div id="retrobg-lines">
+                        <div id="retrobg-vlines">
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                        </div>
+                        <div id="retrobg-hlines">
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="retrobg-groundShadow"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

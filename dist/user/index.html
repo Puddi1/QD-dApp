@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../logoColoredQD.svg" sizes="any" type="image/svg+xml">
+    <title>QuarryDraw - User</title>
+
+    
+    
+  <script type="module" crossorigin src="../assets/user-a261a36d.js"></script>
+  <link rel="modulepreload" crossorigin href="../assets/modulepreload-polyfill-ec808ebb.js">
+  <link rel="modulepreload" crossorigin href="../assets/AvalancheValidatorSettersAndGettersFacet-44779d00.js">
+  <link rel="modulepreload" crossorigin href="../assets/AvalancheValidatorHealthAndUpgradesFacet-9e3a8d38.js">
+  <link rel="modulepreload" crossorigin href="../assets/web3-provider-fa690591.js">
+  <link rel="stylesheet" href="../assets/index-77ea9ebf.css">
+</head>
+<body>
+    <!-- Menu -->
+    <!-- Toggle button -->
+    <div id="toggle-button">
+        <div id="top-bar" class="bar"></div>
+        <div id="center-bar" class="bar"></div>
+        <div id="bottom-bar" class="bar"></div>
+    </div>
+      
+    <!-- Sidebar menu -->
+    <div id="sidebar">
+        <ul id="sidebar-ul">
+            <div class="imageSidebar-container">
+                <img id="home-sidebar" src="../logoAvaxQD.svg" alt="Home">
+            </div>
+            <a href="../index.html"><li>Home</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="user-sidebar" src="../icons/userLandingIcon.svg" alt="User">
+            </div>
+            <a href="#"><li id="sidebar-userPlaceholder">User</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="manageUser-sidebar" src="../icons/manageUserLandingIcon.svg" alt="Manager User">
+            </div>
+            <a href="../manageUsers/index.html"><li>Manage User</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="levelUp-sidebar" src="../icons/levelUpLandingIcon.svg" alt="Level Up">
+            </div>
+            <a href="../levelUp/index.html"><li>Level Up</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="liquidDelegating-sidebar" src="../icons/liquidDelegatingLandingIcon.svg" alt="Liquid delegating vault">
+            </div>
+            <a href="#"><li>█ED█C██D</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="liquidStaking-sidebar" src="../icons/liquidStakingLandingIcon.svg" alt="Liquid staking vault">
+            </div>
+            <a href="#"><li>R█D██T█D</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="marketplace-sidebar" src="../icons/marketplaceLandingIcon.svg" alt="Marketplace">
+            </div>
+            <a href="#"><li>█ED█C█E█</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="redeem-sidebar" src="../icons/redeemLandingIcon.svg" alt="Redeem dashboard">
+            </div>
+            <a href="#"><li>R█D██TE█</li></a>
+    
+            <div class="imageSidebar-container">
+                <img id="stats-sidebar" src="../icons/statsLandingIcon.svg" alt="Statistics dashboard">
+            </div>
+            <a href="#"><li>█ED█C█E█</li></a>
+        </ul>
+    </div>
+    
+    <main>
+        <div id="metamask-container">
+            <button id="button-metamask" on:click={connectUser}>
+                <img id="metamask" src="../icons/metamaskIcon.svg" alt="Reward Icon">
+            </button>
+        </div>
+    
+        <div id="minting-container">
+            <div id="avalancheLogo-container">
+                <img id="avalancheLogo" src="../emptyWhiteAvaxLogo.svg" alt="Avalanche logo">
+            </div>
+            <div id="mintingInput-container">
+                <input id="input-number" type="number" placeholder="Amount">
+                <button id="button-mint"><strong id="ownText">OWN</strong></button>
+            </div>
+        </div>
+    
+        <div id="dashboard-container">
+            <div id="icons-container">
+                <div id="healthIcon-container">
+                    <img id="healthIcon" src="../icons/healthIcon.svg" alt="Reward Icon">
+                </div>
+                <div id="rewardIcon-container">
+                    <img id="rewardIcon" src="../icons/rewardIcon.svg" alt="Reward Icon">
+                </div>
+            </div>
+    
+            <div id="level1-container">
+                <div id="data-container-containerLevel1">
+                    <div class="data-container">
+                        <div class="data-level-container">
+                            <h1 class="data-level">1</h1>
+                        </div>
+                        <div class="data-quantity-container">
+                            <p id="quantity-level1" class="data-quantity">123456</p>
+                        </div>
+                        <div class="data-lifetime-container">
+                            <p id="health-level1" class="data-lifetime">14d</p>
+                        </div>
+                        <div class="data-lifetimeVisualizer-container">
+                            <img id="healthVisualizer-level1" class="data-lifetimeVisualizer" src="../icons/lifetimeVisualizerIconS.svg" alt="Lifetime viualizer icon">
+                        </div>
+                        <div class="data-rewards-container">
+                            <p id="rewards-level1" class="data-rewards">0.000123</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-health-container">
+                    <input class="checkbox-health" type="checkbox" name="1" value="health1" />
+                </div>
+                <div class="checkbox-rewards-container">
+                    <input class="checkbox-rewards" type="checkbox" name="1" value="rewards1" />
+                </div>
+                <div class="icon-levelUp-container">
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level1" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                </div>
+            </div>
+    
+            <div id="level2-container">
+                <div id="data-container-containerLevel2">
+                    <div class="data-container">
+                        <div class="data-level-container">
+                            <h1 class="data-level">2</h1>
+                        </div>
+                        <div class="data-quantity-container">
+                            <p id="quantity-level2" class="data-quantity">12346</p>
+                        </div>
+                        <div class="data-lifetime-container">
+                            <p id="health-level2" class="data-lifetime">24d</p>
+                        </div>
+                        <div class="data-lifetimeVisualizer-container">
+                            <img id="healthVisualizer-level2" class="data-lifetimeVisualizer" src="../icons/lifetimeVisualizerIconS.svg" alt="Lifetime viualizer icon">
+                        </div>
+                        <div class="data-rewards-container">
+                            <p id="rewards-level2" class="data-rewards">0.0123</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-health-container">
+                    <input class="checkbox-health" type="checkbox" name="2" value="health1" />
+                </div>
+                <div class="checkbox-rewards-container">
+                    <input class="checkbox-rewards" type="checkbox" name="2" value="rewards1" />
+                </div>
+                <div class="icon-levelUp-container">
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level2" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                </div>
+            </div>
+    
+            <div id="level3-container">
+                <div id="data-container-containerLevel3">
+                    <div id="rcpIcon-container">
+                        <img id="rcpIcon" src="../icons/rcpIcon.svg" alt="Reward Icon">
+                    </div>
+    
+                    <div class="data-container">
+                        <div class="data-level-container">
+                            <h1 class="data-level">3</h1>
+                        </div>
+                        <div class="data-quantity-container">
+                            <p id="quantity-level3" class="data-quantity">123456</p>
+                        </div>
+                        <div class="data-lifetime-container">
+                            <p id="health-level3" class="data-lifetime">14d</p>
+                        </div>
+                        <div class="data-lifetimeVisualizer-container">
+                            <img id="healthVisualizer-level3" class="data-lifetimeVisualizer" src="../icons/lifetimeVisualizerIconS.svg" alt="Lifetime viualizer icon">
+                        </div>
+                        <div class="data-rewards-container">
+                            <p id="rewards-level3" class="data-rewards">0.000123</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-health-container">
+                    <input class="checkbox-health" type="checkbox" name="3" value="health1" />
+                </div>
+                <div class="checkbox-rewards-container">
+                    <input class="checkbox-rewards" type="checkbox" name="3" value="rewards1" />
+                </div>
+                <div class="icon-levelUp-container">
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level3" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                </div>
+            </div>
+    
+            <div id="level4-container">
+                <div id="data-container-containerLevel4">
+                    <div class="data-container">
+                        <div class="data-level-container">
+                            <h1 class="data-level">4</h1>
+                        </div>
+                        <div class="data-quantity-container">
+                            <p id="quantity-level4" class="data-quantity">156</p>
+                        </div>
+                        <div class="data-lifetime-container">
+                            <p id="health-level4" class="data-lifetime">1d</p>
+                        </div>
+                        <div class="data-lifetimeVisualizer-container">
+                            <img id="healthVisualizer-level4" class="data-lifetimeVisualizer" src="../icons/lifetimeVisualizerIconS.svg" alt="Lifetime viualizer icon">
+                        </div>
+                        <div class="data-rewards-container">
+                            <p id="rewards-level4" class="data-rewards">1.23</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-health-container">
+                    <input class="checkbox-health" type="checkbox" name="4" value="health1" />
+                </div>
+                <div class="checkbox-rewards-container">
+                    <input class="checkbox-rewards" type="checkbox" name="4" value="rewards1" />
+                </div>
+                <div class="icon-levelUp-container">
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level4" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                </div>
+            </div>
+    
+            <div id="level5-container">
+                <div id="data-container-containerLevel5">
+                    <div class="data-container">
+                        <div class="data-level-container">
+                            <h1 class="data-level">5</h1>
+                        </div>
+                        <div class="data-quantity-container">
+                            <p id="quantity-level5" class="data-quantity">6</p>
+                        </div>
+                        <div class="data-lifetime-container">
+                            <p id="health-level5" class="data-lifetime">30d</p>
+                        </div>
+                        <div class="data-lifetimeVisualizer-container">
+                            <img id="healthVisualizer-level5" class="data-lifetimeVisualizer" src="../icons/lifetimeVisualizerIconS.svg" alt="Lifetime viualizer icon">
+                        </div>
+                        <div class="data-rewards-container">
+                            <p id="rewards-level5" class="data-rewards">12345</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-health-container">
+                    <input class="checkbox-health" type="checkbox" name="5" value="health1" />
+                </div>
+                <div class="checkbox-rewards-container">
+                    <input class="checkbox-rewards" type="checkbox" name="5" value="rewards1" />
+                </div>
+                <div class="icon-levelUp-container">
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level5" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="background">
+        <!-- Animated Background -->
+        <!-- Bottom -->
+        <div id="retrobg">
+            <div id="retrobg-ground">
+                <div id="retrobg-linesWrap">
+                    <div id="retrobg-lines">
+                        <div id="retrobg-vlines">
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                            <div class="retrobg-vline"></div>
+                        </div>
+                        <div id="retrobg-hlines">
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                            <div class="retrobg-hline"></div>
+                        </div>
+                    </div>
+                </div>
+                <div id="retrobg-groundShadow"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -115,7 +115,11 @@ a {
     justify-content: center;
     align-items: center;
   }
-  #sidebar-ul li {
+  .redacted,
+  #sidebar-homePlaceholder,
+  #sidebar-userPlaceholder,
+  #sidebar-levelUpPlaceholder,
+  #sidebar-manageUserPlaceholder {
     color: white;
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -123,7 +127,7 @@ a {
     transition: .5s;
     border-bottom: 1px solid transparent;
   }
-  #sidebar-userPlaceholder {
+  #sidebar-levelUpPlaceholder {
     color: rgb(215, 80, 74);
     border-bottom: 1px solid white;
   }

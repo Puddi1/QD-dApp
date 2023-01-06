@@ -17,3 +17,8 @@ toggleButton.addEventListener('click', () => {
         sidebarVisible = false;
     }
 });
+
+// Reduce the background opacity if bacdrop filter isn't present
+if (!window.CSS.supports('backdrop-filter', 'blur(10px)')) {
+    sidebar.style.backgroundImage = "linear-gradient(rgb(75, 0, 0, 0.9), rgba(50, 0, 0, 0.5))";
+}

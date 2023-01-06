@@ -18,6 +18,11 @@ toggleButton.addEventListener('click', () => {
     }
 });
 
+// Reduce the background opacity if bacdrop filter isn't present
+if (!window.CSS.supports('backdrop-filter', 'blur(10px)')) {
+    sidebar.style.backgroundImage = "linear-gradient(rgb(75, 0, 0, 0.9), rgba(50, 0, 0, 0.5))";
+}
+
 // // User // //
 // etherjs setup: abi contract, provider
 import { ethers } from 'ethers';
@@ -64,13 +69,14 @@ metamaskButton.addEventListener("click", async () => {
 });
 
 // change avax background based on supply - better with new function on contract
-let emptyWhiteAvaxLogo = document.getElementById("avalancheLogo");
+let gradientBackgroundAvaxLogo = document.getElementById("Gradient2");
 async function whiteAvaxLogoUpdate() {
     let totalSupply = (await _AvalancheValidatorSettersAndGettersFacet.getTotalCurrentSupplyPondered()).toString();
+    // let percentage = (totalSupply / 30_000_000) * 100;
+    let percentage = 60;
+    let y2 = 2.5 - 2.5 * percentage / 100;
 
-    let percentage = (totalSupply / 30_000_000) * 100;
-
-    // emptyWhiteAvaxLogo.style.background = "linear-gradient(black " + (100 - percentage.toFixed(3)) + "%, #D7504A)";
+    gradientBackgroundAvaxLogo.setAttribute('y2', y2.toString());
 }
 
 // mint new tokens
@@ -119,33 +125,59 @@ let healthLVL2 = document.getElementById("health-level2");
 let healthLVL3 = document.getElementById("health-level3");
 let healthLVL4 = document.getElementById("health-level4");
 let healthLVL5 = document.getElementById("health-level5");
-let healthVisualizer1 = document.getElementById("healthVisualizer-level1");
-let healthVisualizer2 = document.getElementById("healthVisualizer-level2");
-let healthVisualizer3 = document.getElementById("healthVisualizer-level3");
-let healthVisualizer4 = document.getElementById("healthVisualizer-level4");
-let healthVisualizer5 = document.getElementById("healthVisualizer-level5");
+let strokeVisualizers1 = document.getElementsByClassName("stroke-lifetimeVisualizer-level1");
+let strokeVisualizers2 = document.getElementsByClassName("stroke-lifetimeVisualizer-level2");
+let strokeVisualizers3 = document.getElementsByClassName("stroke-lifetimeVisualizer-level3");
+let strokeVisualizers4 = document.getElementsByClassName("stroke-lifetimeVisualizer-level4");
+let strokeVisualizers5 = document.getElementsByClassName("stroke-lifetimeVisualizer-level5");
 async function displayHealth() {
-    let health = [];
-    let timestamp = (await provider.getBlock(await provider.getBlockNumber())).timestamp;
+    let health = [31, 10, 1, 26, 18];
+    // let timestamp = (await provider.getBlock(await provider.getBlockNumber())).timestamp;
+    console.log('heallth');
 
-    for (let i = 0; i < 5; ++i) { 
-        let ownerHealth = (await _AvalancheValidatorSettersAndGettersFacet.getOwnerHealth(await signer.getAddress(), i)).toString();
+    // for (let i = 0; i < 5; ++i) { 
+    //     let ownerHealth = (await _AvalancheValidatorSettersAndGettersFacet.getOwnerHealth(await signer.getAddress(), i)).toString();
 
-        if (ownerHealth > 0 && ownerHealth <= timestamp) {
-            let activityPeriod = (await _AvalancheValidatorSettersAndGettersFacet.getActivityPeriod()).toString();
-            health[i] = Math.round((activityPeriod - (timestamp - ownerHealth)) / 3600); // 86400 for 31d for 12h you eed hours: 60*60
-        } else if (ownerHealth > 0 && ownerHealth >= timestamp) {
-            health[i] = Math.round((ownerHealth - timestamp) / 3600) + "cp"; // 86400 for 31d for 12h you eed hours: 60*60
-        } else {
-            health[i] = 0;
+    //     if (ownerHealth > 0 && ownerHealth <= timestamp) {
+    //         let activityPeriod = (await _AvalancheValidatorSettersAndGettersFacet.getActivityPeriod()).toString();
+    //         health[i] = Math.round((activityPeriod - (timestamp - ownerHealth)) / 3600); // 86400 for 31d for 12h you eed hours: 60*60
+    //     } else if (ownerHealth > 0 && ownerHealth >= timestamp) {
+    //         health[i] = Math.round((ownerHealth - timestamp) / 3600) + "cp"; // 86400 for 31d for 12h you eed hours: 60*60
+    //     } else {
+    //         health[i] = 0;
+    //     }
+    // }
+
+    let healthCoefficient = 0;
+    for (let i = 0; i < health.length; ++i) {
+        if (i == 0 && typeof(health[i]) == typeof(0) && health[i] > 0) {
+            healthCoefficient = (health[i] / 5).toFixed(0);
+            for (let n = 0; n < healthCoefficient; ++n) {
+                strokeVisualizers1[n].setAttribute('stroke', 'rgb(215, 80, 74)');
+            }
+        }  else if (i == 1 && typeof(health[i]) == typeof(0) && health[i] > 0) {
+            healthCoefficient = (health[i] / 5).toFixed(0);
+            for (let n = 0; n < healthCoefficient; ++n) {
+                strokeVisualizers2[n].setAttribute('stroke', 'rgb(215, 80, 74)');
+            }
+        }  else if (i == 2 && typeof(health[i]) == typeof(0) && health[i] > 0) {
+            healthCoefficient = (health[i] / 5).toFixed(0);
+            for (let n = 0; n < healthCoefficient; ++n) {
+                strokeVisualizers3[n].setAttribute('stroke', 'rgb(215, 80, 74)');
+            }
+        }  else if (i == 3 && typeof(health[i]) == typeof(0) && health[i] > 0) {
+            healthCoefficient = (health[i] / 5).toFixed(0);
+            for (let n = 0; n < healthCoefficient; ++n) {
+                strokeVisualizers4[n].setAttribute('stroke', 'rgb(215, 80, 74)');
+            }
+        }  else if (i == 4 && typeof(health[i]) == typeof(0) && health[i] > 0) {
+            healthCoefficient = (health[i] / 5).toFixed(0);
+            for (let n = 0; n < healthCoefficient; ++n) {
+                strokeVisualizers5[n].setAttribute('stroke', 'rgb(215, 80, 74)');
+            }
+            console.log('4 level visuallizer');
         }
     }
-
-    // healthVisualizer1.style.fill = "linear-gradient(white " + (100 - ((31 / 31) * 100).toFixed(3)) + "%, #D7504A)";
-    // healthVisualizer2.style.fill = "linear-gradient(white " + (100 - ((health[1] / 31) * 100).toFixed(3)) + "%, #D7504A)";
-    // healthVisualizer3.style.background = "linear-gradient(white " + (100 - ((health[2] / 31) * 100).toFixed(3)) + "%, #D7504A)";
-    // healthVisualizer4.style.background = "linear-gradient(white " + (100 - ((health[3] / 31) * 100).toFixed(3)) + "%, #D7504A)";
-    // healthVisualizer5.style.background = "linear-gradient(white " + (100 - ((health[4] / 31) * 100).toFixed(3)) + "%, #D7504A)";
 
     healthLVL1.innerHTML = health[0] + "d";
     healthLVL2.innerHTML = health[1] + "d";
@@ -322,9 +354,11 @@ window.ethereum.on('accountsChanged', async function (accounts) {
 
 // throwing function to update global variables
 setTimeout(async () => {
+    console.log('timeout');
     await whiteAvaxLogoUpdate();
+    await displayHealth();
     await displayRewards();
-}, 10000); // 10s
+}, 100); // 10s
 setTimeout(async () => {
     await displayHealth();
-}, 120000); // 2min
+}, 120_000); // 2min

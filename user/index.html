@@ -68,6 +68,15 @@
             <a href="#"><li class="redacted">█ED█C█E█</li></a>
         </ul>
     </div>
+
+    <div id="message-container">
+        <div id="message-header">
+            <p id="message-header-paragraph"></p>
+        </div>
+        <div id="message-body">
+            <p id="message-body-paragraph"></p>
+        </div>
+    </div>
     
     <main>
         <div id="metamask-container">
@@ -90,9 +99,104 @@
                 </svg>
             </div>
             <div id="mintingInput-container">
-                <input id="input-number" type="number" placeholder="Amount">
+                <div id="mintingInput-header-container">
+                    <button id="button-dropdown">
+                        <span id="icon-button-dropdown">
+                            <img src="../miniQD.svg" alt="Token">
+                        </span>
+                        <span id="name-button-dropdown">
+                            TOKEN
+                        </span>
+                        <span id="dropdown-button-dropdown">
+                            <img src="../dropdown1.svg" alt="Dropdown Icon">
+                        </span>
+                    </button>
+                    <p id="for-header">FOR</p>
+                    <span id="shares-label-container">
+                        <p id="shares-label"><strong>SHARES</strong></p>
+                    </span>
+                </div>
+
+                <div id="mintingInput-remaining-container">
+                    <p id="left-leftNumber-paragraph">0</p>
+                    <p id="left-paragraph">LEFT</p>
+                    <p id="left-rightNumber-paragraph">0</p>
+                </div>
+
+                <div id="mintingInput-body-container">
+                    <input id="input-token" class="input-number" type="number" placeholder="Amount">
+                    <p id="input-for">FOR</p>
+                    <input id="input-shares" class="input-number" type="number" placeholder="Amount">
+                </div>
+                
                 <button id="button-mint"><strong id="ownText">OWN</strong></button>
             </div>
+        </div>
+
+        <div id="dropdown-token-container">
+            <section id="dropdown-token-section">
+                <div id="dropdown-token-header-container">
+                    <p id="dropdown-token-header-paragraph">
+                        <strong>Select a token</strong>
+                    </p>
+                    <button id="dropdown-token-header-button">
+                        <img id="closeDropdownToken" src="../closeIcon1.svg" alt="Close button">
+                    </button>
+                </div>
+                <div id="dropdown-token-body-container">
+                    <div id="avalanche-token">
+                        <img id="avalanche-icon" src="../miniEmptyWhiteAvaxLogo.svg" alt="Native Avax logo">
+                        <p><strong>
+                            AVAX - Native
+                        </strong></p>
+                    </div>
+                    <div id="thor-token">
+                        <img id="thor-icon" src="../miniThor.svg" alt="Thor token loto">
+                        <p><strong>
+                            THOR
+                        </strong></p>
+                    </div>
+                    <div id="OGodin-token">
+                        <img src="../OGOdinWhite.svg" alt="OG Odin logo">
+                        <p><strong>
+                            OG Odin Node
+                        </strong></p>
+                    </div>
+                    <div id="OGthor-token">
+                        <img src="../OGThorWhite.svg" alt="OG Thor logo">
+                        <p><strong>
+                            OG Thor Node
+                        </strong></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div id="dropdown-token-container-companions">
+            <section id="dropdown-token-section-companions">
+                <div id="dropdown-token-header-container-companions">
+                    <p id="dropdown-token-header-paragraph-companions">
+                        <strong>Select a suggested companion</strong>
+                    </p>
+                    <button id="dropdown-token-header-button-companions">
+                        <img id="closeDropdownToken-companions" src="../closeIcon1.svg" alt="Close button">
+                    </button>
+                </div>
+                <div id="dropdown-token-body-container-companions">
+                    <div id="ThorFi-token-companions">
+                        <img id="ThorFi-icon-companions" src="../miniThor.svg" alt="Thor logo">
+                        <p><strong>
+                            ThorFi
+                        </strong></p>
+                    </div>
+                    <div id="QD-token-companions">
+                        <img id="QD-icon-companions" src="../miniQD.svg" alt="QuarryDraw logo">
+                        <p><strong>
+                            QuarryDraw
+                        </strong></p>
+                    </div>
+                </div>
+            </section>
         </div>
     
         <div id="dashboard-container">
@@ -112,10 +216,10 @@
                             <h1 class="data-level">1</h1>
                         </div>
                         <div class="data-quantity-container">
-                            <p id="quantity-level1" class="data-quantity">123456</p>
+                            <p id="quantity-level1" class="data-quantity">0</p>
                         </div>
                         <div class="data-lifetime-container">
-                            <p id="health-level1" class="data-lifetime">14d</p>
+                            <p id="health-level1" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
                             <svg id="healthVisualizer-level1" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -135,7 +239,7 @@
                             </svg>
                         </div>
                         <div class="data-rewards-container">
-                            <p id="rewards-level1" class="data-rewards">0.000123</p>
+                            <p id="rewards-level1" class="data-rewards">0</p>
                         </div>
                     </div>
                 </div>
@@ -158,10 +262,10 @@
                             <h1 class="data-level">2</h1>
                         </div>
                         <div class="data-quantity-container">
-                            <p id="quantity-level2" class="data-quantity">12346</p>
+                            <p id="quantity-level2" class="data-quantity">0</p>
                         </div>
                         <div class="data-lifetime-container">
-                            <p id="health-level2" class="data-lifetime">24d</p>
+                            <p id="health-level2" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
                             <svg id="healthVisualizer-level2" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -181,7 +285,7 @@
                             </svg>
                         </div>
                         <div class="data-rewards-container">
-                            <p id="rewards-level2" class="data-rewards">0.0123</p>
+                            <p id="rewards-level2" class="data-rewards">0</p>
                         </div>
                     </div>
                 </div>
@@ -208,10 +312,10 @@
                             <h1 class="data-level">3</h1>
                         </div>
                         <div class="data-quantity-container">
-                            <p id="quantity-level3" class="data-quantity">1234</p>
+                            <p id="quantity-level3" class="data-quantity">0</p>
                         </div>
                         <div class="data-lifetime-container">
-                            <p id="health-level3" class="data-lifetime">14d</p>
+                            <p id="health-level3" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
                             <svg id="healthVisualizer-level3" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -231,7 +335,7 @@
                             </svg>
                         </div>
                         <div class="data-rewards-container">
-                            <p id="rewards-level3" class="data-rewards">0.123</p>
+                            <p id="rewards-level3" class="data-rewards">0</p>
                         </div>
                     </div>
                 </div>
@@ -254,10 +358,10 @@
                             <h1 class="data-level">4</h1>
                         </div>
                         <div class="data-quantity-container">
-                            <p id="quantity-level4" class="data-quantity">156</p>
+                            <p id="quantity-level4" class="data-quantity">0</p>
                         </div>
                         <div class="data-lifetime-container">
-                            <p id="health-level4" class="data-lifetime">1d</p>
+                            <p id="health-level4" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
                             <svg id="healthVisualizer-level4" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +381,7 @@
                             </svg>
                         </div>
                         <div class="data-rewards-container">
-                            <p id="rewards-level4" class="data-rewards">1.23</p>
+                            <p id="rewards-level4" class="data-rewards">0</p>
                         </div>
                     </div>
                 </div>
@@ -300,10 +404,10 @@
                             <h1 class="data-level">5</h1>
                         </div>
                         <div class="data-quantity-container">
-                            <p id="quantity-level5" class="data-quantity">6</p>
+                            <p id="quantity-level5" class="data-quantity">0</p>
                         </div>
                         <div class="data-lifetime-container">
-                            <p id="health-level5" class="data-lifetime">30d</p>
+                            <p id="health-level5" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
                             <svg id="healthVisualizer-level5" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -323,7 +427,7 @@
                             </svg>
                         </div>
                         <div class="data-rewards-container">
-                            <p id="rewards-level5" class="data-rewards">123</p>
+                            <p id="rewards-level5" class="data-rewards">0</p>
                         </div>
                     </div>
                 </div>
@@ -338,7 +442,84 @@
                     <a href="../levelUp/index.html"><img id="levelUpIcon-level5" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
                 </div>
             </div>
+
+            <div id="companions-container">
+                <div id="companions-button-container">
+                    <button class="companions-button" id="companions-add-button">
+                        <span class="buttonText" id="buttonTextAdd">Add</span>
+                    </button>
+                    <button class="companions-button" id="companions-remove-button">
+                        <span class="buttonText" id="buttonTextRemove">Remove</span>
+                    </button>
+                </div>
+                <div id="companions-input-container">
+                    <input id="companions-input" type="text" placeholder="Nobody">
+                    <div id="companions-suggestion-div">
+                        <img id="companions-suggestion" src="../dropdown1.svg" alt="Suggested addresse">
+                    </div>
+                </div>
+            </div>
         </div>
+
+        <section id="display-tokens-section">
+            <div id="display-tokens-grid">
+                <!-- <div class="token-grid" id="token-selected">
+                    <div class="token-image">
+                        <img src="https://i.seadn.io/gcs/files/26b82a02d717fb0cceb28acd063d82bb.gif?auto=format&w=750" alt="Image token">
+                    </div>
+                    <div class="token-label">
+                        <p><strong>Odin Name</strong></p>
+                        <p><strong>#1234</strong></p>
+                    </div>
+                </div>
+                <div class="token-grid">
+                    <div class="token-image">
+                        <img src="https://i.seadn.io/gcs/files/26b82a02d717fb0cceb28acd063d82bb.gif?auto=format&w=750" alt="Image token">
+                    </div>
+                    <div class="token-label">
+                        <p><strong>Odin Name</strong></p>
+                        <p><strong>#1234</strong></p>
+                    </div>
+                </div>
+                <div class="token-grid">
+                    <div class="token-image">
+                        <img src="https://i.seadn.io/gcs/files/26b82a02d717fb0cceb28acd063d82bb.gif?auto=format&w=750" alt="Image token">
+                    </div>
+                    <div class="token-label">
+                        <p><strong>Odin Name</strong></p>
+                        <p><strong>#1234</strong></p>
+                    </div>
+                </div>
+                <div class="token-grid">
+                    <div class="token-image">
+                        <img src="https://i.seadn.io/gcs/files/26b82a02d717fb0cceb28acd063d82bb.gif?auto=format&w=750" alt="Image token">
+                    </div>
+                    <div class="token-label">
+                        <p><strong>Odin Name</strong></p>
+                        <p><strong>#1234</strong></p>
+                    </div>
+                </div>
+                <div class="token-grid">
+                    <div class="token-image">
+                        <img src="https://i.seadn.io/gcs/files/26b82a02d717fb0cceb28acd063d82bb.gif?auto=format&w=750" alt="Image token">
+                    </div>
+                    <div class="token-label">
+                        <p><strong>Odin Name</strong></p>
+                        <p><strong>#1234</strong></p>
+                    </div>
+                </div>
+                <div class="token-grid">
+                    <div class="token-image">
+                        <img src="https://i.seadn.io/gcs/files/26b82a02d717fb0cceb28acd063d82bb.gif?auto=format&w=750" alt="Image token">
+                    </div>
+                    <div class="token-label">
+                        <p><strong>Odin Name</strong></p>
+                        <p><strong>#1234</strong></p>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <div id="background">

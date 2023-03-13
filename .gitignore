@@ -18,6 +18,7 @@ public
 ./index.html
 ./main.js
 ./style.css
+backend
 
 # Editor directories and files
 .vscode/*
@@ -29,3 +30,5 @@ public
 *.njsproj
 *.sln
 *.sw?
+
+.env

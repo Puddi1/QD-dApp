@@ -26,7 +26,7 @@ if (!window.CSS.supports('backdrop-filter', 'blur(10px)')) {
 // etherjs setup: abi contract, provider
 import { ethers } from 'ethers';
 let provider = new ethers.providers.Web3Provider(window.ethereum);
-let diamondAddress = "0x65d020B53860ab9d2954bC63758a604bb7d489Dd";
+let diamondAddress = import.meta.env.VITE_DIAMOND_ADDRESS;
 
 import AvalancheValidatorFacet from "../artifacts/contracts/validator/facets/AvalancheValidatorFacet.sol/AvalancheValidatorFacet.json";
 import AvalancheValidatorSettersAndGettersFacet from "../artifacts/contracts/validator/facets/AvalancheValidatorSettersAndGettersFacet.sol/AvalancheValidatorSettersAndGettersFacet.json";

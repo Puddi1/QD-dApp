@@ -10,15 +10,6 @@ lerna-debug.log*
 node_modules
 dist-ssr
 *.local
-artifacts
-./levelUp
-./manageUser
-public
-./user
-./index.html
-./main.js
-./style.css
-backend
 
 # Editor directories and files
 .vscode/*

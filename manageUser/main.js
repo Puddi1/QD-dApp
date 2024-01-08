@@ -69,7 +69,7 @@ for (let i = 0; i < levels.length; i++) {
 async function getCurrentRadioInput() {
     for (let i = 0; i < levels.length; i++) {
         if (levels[i].checked == true)
-        return levels[i].value;
+            return levels[i].value;
     }
 }
 
@@ -85,10 +85,10 @@ async function updateUserStatus() {
         address.value[1] == 'x' &&
         id != null &&
         signer != undefined
-        ) {
+    ) {
         let health = (await _AvalancheValidatorSettersAndGettersFacet.getOwnerHealth(address.value, id)).toString();
         let timestamp = (await provider.getBlock(await provider.getBlockNumber())).timestamp;
-        if (timestamp - health >= 60*60*4 && health > 0) { // 31*24*60*60
+        if (timestamp - health >= 60 * 60 * 4 && health > 0) { // 31*24*60*60
             console.log("not healthy == go and manage")
             emptyWhiteAvaxLogo.style.filter = "invert(80%) sepia(15%) saturate(5577%) hue-rotate(77deg) brightness(106%) contrast(102%)";
         } else {
@@ -112,7 +112,7 @@ manageButton.addEventListener("click", async () => {
     let health = (await _AvalancheValidatorSettersAndGettersFacet.getOwnerHealth(address.value, id)).toString();
     let timestamp = (await provider.getBlock(await provider.getBlockNumber())).timestamp;
     // execute tx
-    if (timestamp - health > 60*60*4 && health > 0) { // 31*24*60*60
+    if (timestamp - health > 60 * 60 * 4 && health > 0) { // 31*24*60*60
         let tx = await signer_AvalancheValidatorFacet.manageInactiveValidatorShares(address.value, id, { gasLimit: 3_000_000 });
         await tx.wait(1);
     }
@@ -129,9 +129,9 @@ async function update(_address, _networkId) {
     }
     if (
         // (_networkId != "0xa86a" || _networkId != 43114 ) && _networkId != undefined
-        (_networkId != "0xa869" || _networkId != 43113 ) && _networkId != undefined // testnet
+        (_networkId != "0xa869" || _networkId != 43113) && _networkId != undefined // testnet
     ) {
-        // window.ethereum.request({
+        // window.ethereum.request({ // Mainnet
         //     method: "wallet_addEthereumChain",
         //     params: [{
         //         chainId: "0xa86a",
@@ -145,7 +145,7 @@ async function update(_address, _networkId) {
         //         blockExplorerUrls: ["https://snowtrace.io/"]
         //     }]
         // });
-        window.ethereum.request({ // testnet
+        window.ethereum.request({ // Testnet
             method: "wallet_addEthereumChain",
             params: [{
                 chainId: "0xa869",

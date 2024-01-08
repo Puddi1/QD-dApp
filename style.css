@@ -15,6 +15,7 @@
   align-items: center;
   align-content: center;
 }
+
 #logoAvalanche-wrapper {
   position: relative;
   display: table;
@@ -23,6 +24,7 @@
   max-height: 100vh;
   margin: auto;
 }
+
 #logoAvalanche {
   display: table-cell;
   max-width: 100%;
@@ -38,14 +40,14 @@
 #redeem,
 #levelUp,
 #stats,
-#unactiveUser
-{
+#unactiveUser {
   z-index: 2;
   position: absolute;
   margin: 0;
   opacity: 0;
   transition: .6s ease-out;
 }
+
 #marketplace:hover,
 #liquidDelegating:hover,
 #user:hover,
@@ -53,30 +55,34 @@
 #redeem:hover,
 #levelUp:hover,
 #stats:hover,
-#unactiveUser:hover
-{
+#unactiveUser:hover {
   opacity: 1;
 }
+
 #marketplace {
   height: 10%;
   top: 11.5%;
   left: 45.25%;
 }
+
 #liquidDelegating {
   height: 16%;
   top: 42.7%;
   left: 27.5%;
 }
+
 #user {
   height: 7%;
   top: 34.5%;
   left: 47.25%;
 }
+
 #liquidStaking {
   height: 16%;
   top: 42%;
   left: 58%;
 }
+
 #redeem {
   height: 9%;
   top: 80.5%;
@@ -88,11 +94,13 @@
   top: 80.5%;
   left: 34.3%;
 }
+
 #stats {
   height: 8%;
   top: 80.5%;
   left: 56.3%;
 }
+
 #unactiveUser {
   height: 9%;
   top: 80%;
@@ -101,6 +109,7 @@
 
 /* Media Query for touch screens -> no opacity effect */
 @media screen and (max-width: 750px) {
+
   #marketplace,
   #liquidDelegating,
   #user,
@@ -108,9 +117,8 @@
   #redeem,
   #levelUp,
   #stats,
-  #unactiveUser
-  {
-      opacity: 1;
+  #unactiveUser {
+    opacity: 1;
   }
 }
 
@@ -136,9 +144,11 @@ Menu
 
   padding: 4.5px 1px;
 }
+
 #toggle-button:hover {
   border-color: white;
 }
+
 #toggle-button .bar {
   display: block;
 
@@ -147,20 +157,24 @@ Menu
 
   background: #FFFFFF;
   border-radius: 10px;
-  
+
   transition: all .7s ease-in-out;
 
   margin: 6.5px 4.5px;
 }
+
 #toggle-button:hover #center-bar {
   transform: translateX(5px);
 }
+
 #toggle-button:hover #center-bar.visible {
   transform: translateX(-5px);
 }
+
 #toggle-button:hover .bar {
   background: rgb(215, 80, 74);
 }
+
 #toggle-button.visible {
   left: 270px;
 }
@@ -182,6 +196,7 @@ Menu
 
   transition: left 0.5s;
 }
+
 #sidebar.visible {
   left: 0;
 }
@@ -207,12 +222,14 @@ Menu
   align-items: center;
   justify-content: space-evenly; */
 }
+
 #sidebar-ul img {
   text-align: center;
 }
-#home-sidebar, 
-#user-sidebar, 
-#manageUser-sidebar, 
+
+#home-sidebar,
+#user-sidebar,
+#manageUser-sidebar,
 #levelUp-sidebar,
 #liquidStaking-sidebar,
 #liquidDelegating-sidebar,
@@ -221,6 +238,7 @@ Menu
 #stats-sidebar {
   height: 30px;
 }
+
 .imageSidebar-container {
   height: 100%;
   width: 100%;
@@ -229,6 +247,7 @@ Menu
   justify-content: center;
   align-items: center;
 }
+
 .redacted,
 #sidebar-homePlaceholder,
 #sidebar-userPlaceholder,
@@ -241,10 +260,12 @@ Menu
   transition: .5s;
   border-bottom: 1px solid transparent;
 }
+
 #sidebar-homePlaceholder {
   color: rgb(215, 80, 74);
   border-bottom: 1px solid white;
 }
+
 #sidebar-ul li:hover {
   color: rgb(215, 80, 74);
   border-bottom: 1px solid white;
@@ -256,12 +277,14 @@ Menu
   --color-bg: hsl(0, 0%, 0%);
 }
 
-html, body {
+html,
+body {
   height: 100%;
   width: 100%;
   margin: 0;
   overflow: hidden;
 }
+
 /* Environment */
 #background {
   position: absolute;
@@ -291,12 +314,13 @@ html, body {
   bottom: 0;
   background-color: #000;
 }
+
 #retrobg-groundShadow {
   position: absolute;
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient( rgb(50, 0, 0) 0%, transparent );
+  background-image: linear-gradient(rgb(50, 0, 0) 0%, transparent);
 }
 
 #retrobg-linesWrap {
@@ -304,6 +328,7 @@ html, body {
   perspective: 1000px;
   perspective-origin: center top;
 }
+
 #retrobg-lines {
   position: absolute;
   width: 100%;
@@ -311,28 +336,49 @@ html, body {
   transform-origin: top center;
   animation: 6s linear infinite retrobg-lines-anim;
 }
+
 @keyframes retrobg-lines-anim {
-  from { transform: rotateX( 84deg ) translateY( 0 ); }
-  to { transform: rotateX( 84deg ) translateY( 100px ); }
+  from {
+    transform: rotateX(84deg) translateY(0);
+  }
+
+  to {
+    transform: rotateX(84deg) translateY(100px);
+  }
 }
+
 #retrobg-hlines,
 #retrobg-vlines {
   position: absolute;
-  left: calc( ( 900% - 100% ) / -2 );
+  left: calc((900% - 100%) / -2);
   width: 900%;
   height: 500%;
 }
+
 #retrobg-vlines {
   display: flex;
   justify-content: center;
 }
+
 .retrobg-hline,
 .retrobg-vline {
   width: 100%;
   height: 100%;
   background-color: currentColor;
 }
-.retrobg-hline { height: 3px; }
-.retrobg-vline { width: 3px; }
-.retrobg-hline + .retrobg-hline { margin-top: 98px; }
-.retrobg-vline + .retrobg-vline { margin-left: 48px; }
+
+.retrobg-hline {
+  height: 3px;
+}
+
+.retrobg-vline {
+  width: 3px;
+}
+
+.retrobg-hline+.retrobg-hline {
+  margin-top: 98px;
+}
+
+.retrobg-vline+.retrobg-vline {
+  margin-left: 48px;
+}

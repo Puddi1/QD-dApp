@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,6 +11,7 @@
     <script type="module" src="./main.js"></script>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <!-- Menu -->
     <!-- Toggle button -->
@@ -18,54 +20,73 @@
         <div id="center-bar" class="bar"></div>
         <div id="bottom-bar" class="bar"></div>
     </div>
-      
+
     <!-- Sidebar menu -->
     <div id="sidebar">
         <ul id="sidebar-ul">
             <div class="imageSidebar-container">
                 <img id="home-sidebar" src="../logoAvaxQD.svg" alt="Home">
             </div>
-            <a href="../index.html"><li  id="sidebar-homePlaceholder">Home</li></a>
-    
+            <a href="../index.html">
+                <li id="sidebar-homePlaceholder">Home</li>
+            </a>
+
             <div class="imageSidebar-container">
                 <img id="user-sidebar" src="../icons/userLandingIcon.svg" alt="User">
             </div>
-            <a href="#"><li id="sidebar-userPlaceholder">User</li></a>
-    
+            <a href="#">
+                <li id="sidebar-userPlaceholder">User</li>
+            </a>
+
             <div class="imageSidebar-container">
                 <img id="manageUser-sidebar" src="../icons/manageUserLandingIcon.svg" alt="Manager User">
             </div>
-            <a href="../manageUser/index.html"><li id="sidebar-manageUserPlaceholder">Manage User</li></a>
-    
+            <a href="../manageUser/index.html">
+                <li id="sidebar-manageUserPlaceholder">Manage User</li>
+            </a>
+
             <div class="imageSidebar-container">
                 <img id="levelUp-sidebar" src="../icons/levelUpLandingIcon.svg" alt="Level Up">
             </div>
-            <a href="../levelUp/index.html"><li id="sidebar-levelUpPlaceholder">Level Up</li></a>
-    
+            <a href="../levelUp/index.html">
+                <li id="sidebar-levelUpPlaceholder">Level Up</li>
+            </a>
+
             <div class="imageSidebar-container">
-                <img id="liquidDelegating-sidebar" src="../icons/liquidDelegatingLandingIcon.svg" alt="Liquid delegating vault">
+                <img id="liquidDelegating-sidebar" src="../icons/liquidDelegatingLandingIcon.svg"
+                    alt="Liquid delegating vault">
             </div>
-            <a href="#"><li class="redacted">█ED█C██D</li></a>
-    
+            <a href="#">
+                <li class="redacted">█ED█C██D</li>
+            </a>
+
             <div class="imageSidebar-container">
                 <img id="liquidStaking-sidebar" src="../icons/liquidStakingLandingIcon.svg" alt="Liquid staking vault">
             </div>
-            <a href="#"><li class="redacted">R█D██T█D</li></a>
-    
+            <a href="#">
+                <li class="redacted">R█D██T█D</li>
+            </a>
+
             <div class="imageSidebar-container">
                 <img id="marketplace-sidebar" src="../icons/marketplaceLandingIcon.svg" alt="Marketplace">
             </div>
-            <a href="#"><li class="redacted">█ED█C█E█</li></a>
-    
+            <a href="#">
+                <li class="redacted">█ED█C█E█</li>
+            </a>
+
             <div class="imageSidebar-container">
                 <img id="redeem-sidebar" src="../icons/redeemLandingIcon.svg" alt="Redeem dashboard">
             </div>
-            <a href="#"><li class="redacted">R█D██TE█</li></a>
-    
+            <a href="#">
+                <li class="redacted">R█D██TE█</li>
+            </a>
+
             <div class="imageSidebar-container">
                 <img id="stats-sidebar" src="../icons/statsLandingIcon.svg" alt="Statistics dashboard">
             </div>
-            <a href="#"><li class="redacted">█ED█C█E█</li></a>
+            <a href="#">
+                <li class="redacted">█ED█C█E█</li>
+            </a>
         </ul>
     </div>
 
@@ -77,25 +98,30 @@
             <p id="message-body-paragraph"></p>
         </div>
     </div>
-    
+
     <main>
         <div id="metamask-container">
             <button id="button-metamask" on:click={connectUser}>
                 <img id="metamask" src="../icons/metamaskIcon.svg" alt="Reward Icon">
             </button>
         </div>
-    
+
         <div id="minting-container">
             <div id="avalancheLogo-container">
-                <svg id="avalancheLogo" width="402" height="402" viewBox="0 0 402 402" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg id="avalancheLogo" width="402" height="402" viewBox="0 0 402 402" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
                     <linearGradient id="Gradient2" x1="0" x2="0" y1="0" y2="2.5"> <!-- y2 range: [2.5; 0] -->
-                          <stop offset="0%" stop-color="black" stop-opacity="0" />
-                          <stop offset="100%" stop-color="rgb(215, 80, 74)" />
+                        <stop offset="0%" stop-color="black" stop-opacity="0" />
+                        <stop offset="100%" stop-color="rgb(215, 80, 74)" />
                     </linearGradient>
-                    <circle cx="201" cy="201" r="198.5" fill="url(#Gradient2)" id="circle"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M198.5 51.3C202.522 51.0072 205.988 52.2404 208.9 55C209.734 55.9666 210.566 56.9334 211.4 57.9C222.8 78.0334 234.2 98.1666 245.6 118.3C250.802 130.514 250.468 142.581 244.6 154.5C219.6 197.833 194.6 241.166 169.6 284.5C162.574 295.514 152.541 301.814 139.5 303.4C116.7 303.534 93.9 303.534 71.1 303.4C62.1288 302.018 58.2954 296.852 59.6 287.9C60.1896 285.72 61.0562 283.654 62.2 281.7C104.067 207.966 145.933 134.233 187.8 60.5C190.186 56.0102 193.753 52.9436 198.5 51.3Z" fill="white"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M282.3 197.1C286.448 196.908 289.98 198.275 292.9 201.2C293.6 202.034 294.3 202.866 295 203.7C310.602 230.636 326.002 257.704 341.2 284.9C342.992 289.138 342.926 293.338 341 297.5C339.268 300.052 336.902 301.752 333.9 302.6C332.52 302.974 331.12 303.24 329.7 303.4C298.634 303.534 267.566 303.534 236.5 303.4C226.588 301.478 222.956 295.644 225.6 285.9C226.24 284.154 227.04 282.488 228 280.9C242.718 255.666 257.384 230.4 272 205.1C274.428 201.102 277.862 198.434 282.3 197.1Z" fill="white"/>
-                    <circle cx="201" cy="201" r="198.5" stroke="white" stroke-width="3"/>
+                    <circle cx="201" cy="201" r="198.5" fill="url(#Gradient2)" id="circle" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M198.5 51.3C202.522 51.0072 205.988 52.2404 208.9 55C209.734 55.9666 210.566 56.9334 211.4 57.9C222.8 78.0334 234.2 98.1666 245.6 118.3C250.802 130.514 250.468 142.581 244.6 154.5C219.6 197.833 194.6 241.166 169.6 284.5C162.574 295.514 152.541 301.814 139.5 303.4C116.7 303.534 93.9 303.534 71.1 303.4C62.1288 302.018 58.2954 296.852 59.6 287.9C60.1896 285.72 61.0562 283.654 62.2 281.7C104.067 207.966 145.933 134.233 187.8 60.5C190.186 56.0102 193.753 52.9436 198.5 51.3Z"
+                        fill="white" />
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M282.3 197.1C286.448 196.908 289.98 198.275 292.9 201.2C293.6 202.034 294.3 202.866 295 203.7C310.602 230.636 326.002 257.704 341.2 284.9C342.992 289.138 342.926 293.338 341 297.5C339.268 300.052 336.902 301.752 333.9 302.6C332.52 302.974 331.12 303.24 329.7 303.4C298.634 303.534 267.566 303.534 236.5 303.4C226.588 301.478 222.956 295.644 225.6 285.9C226.24 284.154 227.04 282.488 228 280.9C242.718 255.666 257.384 230.4 272 205.1C274.428 201.102 277.862 198.434 282.3 197.1Z"
+                        fill="white" />
+                    <circle cx="201" cy="201" r="198.5" stroke="white" stroke-width="3" />
                 </svg>
             </div>
             <div id="mintingInput-container">
@@ -128,7 +154,7 @@
                     <p id="input-for">FOR</p>
                     <input id="input-shares" class="input-number" type="number" placeholder="Amount">
                 </div>
-                
+
                 <button id="button-mint"><strong id="ownText">OWN</strong></button>
             </div>
         </div>
@@ -147,26 +173,26 @@
                     <div id="avalanche-token">
                         <img id="avalanche-icon" src="../miniEmptyWhiteAvaxLogo.svg" alt="Native Avax logo">
                         <p><strong>
-                            AVAX - Native
-                        </strong></p>
+                                AVAX - Native
+                            </strong></p>
                     </div>
                     <div id="thor-token">
                         <img id="thor-icon" src="../miniThor.svg" alt="Thor token loto">
                         <p><strong>
-                            THOR
-                        </strong></p>
+                                THOR
+                            </strong></p>
                     </div>
                     <div id="OGodin-token">
                         <img src="../OGOdinWhite.svg" alt="OG Odin logo">
                         <p><strong>
-                            OG Odin Node
-                        </strong></p>
+                                OG Odin Node
+                            </strong></p>
                     </div>
                     <div id="OGthor-token">
                         <img src="../OGThorWhite.svg" alt="OG Thor logo">
                         <p><strong>
-                            OG Thor Node
-                        </strong></p>
+                                OG Thor Node
+                            </strong></p>
                     </div>
                 </div>
             </section>
@@ -186,19 +212,19 @@
                     <div id="ThorFi-token-companions">
                         <img id="ThorFi-icon-companions" src="../miniThor.svg" alt="Thor logo">
                         <p><strong>
-                            ThorFi
-                        </strong></p>
+                                ThorFi
+                            </strong></p>
                     </div>
                     <div id="QD-token-companions">
                         <img id="QD-icon-companions" src="../miniQD.svg" alt="QuarryDraw logo">
                         <p><strong>
-                            QuarryDraw
-                        </strong></p>
+                                QuarryDraw
+                            </strong></p>
                     </div>
                 </div>
             </section>
         </div>
-    
+
         <div id="dashboard-container">
             <div id="icons-container">
                 <div id="healthIcon-container">
@@ -208,7 +234,7 @@
                     <img id="rewardIcon" src="../icons/rewardIcon.svg" alt="Reward Icon">
                 </div>
             </div>
-    
+
             <div id="level1-container">
                 <div id="data-container-containerLevel1">
                     <div class="data-container">
@@ -222,18 +248,25 @@
                             <p id="health-level1" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
-                            <svg id="healthVisualizer-level1" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="healthVisualizer-level1" class="data-lifetimeVisualizer" width="34" height="41"
+                                viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_107_146)">
-                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level1"/>
-                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level1"/>
-                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level1"/>
-                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level1"/>
-                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level1"/>
-                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level1"/>
+                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level1" />
+                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level1" />
+                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level1" />
+                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level1" />
+                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level1" />
+                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level1" />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_107_146">
-                                        <rect width="34" height="41"/>
+                                        <rect width="34" height="41" />
                                     </clipPath>
                                 </defs>
                             </svg>
@@ -243,7 +276,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="checkbox-health-container">
                     <input class="checkbox-health" type="checkbox" name="1" value="health1" />
                 </div>
@@ -251,10 +284,11 @@
                     <input class="checkbox-rewards" type="checkbox" name="1" value="rewards1" />
                 </div>
                 <div class="icon-levelUp-container">
-                    <a href="../levelUp/index.html"><img id="levelUpIcon-level1" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level1" class="icon-levelUp"
+                            src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
                 </div>
             </div>
-    
+
             <div id="level2-container">
                 <div id="data-container-containerLevel2">
                     <div class="data-container">
@@ -268,18 +302,25 @@
                             <p id="health-level2" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
-                            <svg id="healthVisualizer-level2" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="healthVisualizer-level2" class="data-lifetimeVisualizer" width="34" height="41"
+                                viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_107_146)">
-                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level2"/>
-                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level2"/>
-                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level2"/>
-                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level2"/>
-                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level2"/>
-                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level2"/>
+                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level2" />
+                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level2" />
+                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level2" />
+                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level2" />
+                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level2" />
+                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level2" />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_107_146">
-                                        <rect width="34" height="41"/>
+                                        <rect width="34" height="41" />
                                     </clipPath>
                                 </defs>
                             </svg>
@@ -289,7 +330,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="checkbox-health-container">
                     <input class="checkbox-health" type="checkbox" name="2" value="health1" />
                 </div>
@@ -297,16 +338,17 @@
                     <input class="checkbox-rewards" type="checkbox" name="2" value="rewards1" />
                 </div>
                 <div class="icon-levelUp-container">
-                    <a href="../levelUp/index.html"><img id="levelUpIcon-level2" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level2" class="icon-levelUp"
+                            src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
                 </div>
             </div>
-    
+
             <div id="level3-container">
                 <div id="data-container-containerLevel3">
                     <div id="rcpIcon-container">
                         <img id="rcpIcon" src="../icons/rcpIcon.svg" alt="Reward Icon">
                     </div>
-    
+
                     <div class="data-container">
                         <div class="data-level-container">
                             <h1 class="data-level">3</h1>
@@ -318,18 +360,25 @@
                             <p id="health-level3" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
-                            <svg id="healthVisualizer-level3" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="healthVisualizer-level3" class="data-lifetimeVisualizer" width="34" height="41"
+                                viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_107_146)">
-                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level3"/>
-                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level3"/>
-                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level3"/>
-                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level3"/>
-                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level3"/>
-                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level3"/>
+                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level3" />
+                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level3" />
+                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level3" />
+                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level3" />
+                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level3" />
+                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level3" />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_107_146">
-                                        <rect width="34" height="41"/>
+                                        <rect width="34" height="41" />
                                     </clipPath>
                                 </defs>
                             </svg>
@@ -339,7 +388,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="checkbox-health-container">
                     <input class="checkbox-health" type="checkbox" name="3" value="health1" />
                 </div>
@@ -347,10 +396,11 @@
                     <input class="checkbox-rewards" type="checkbox" name="3" value="rewards1" />
                 </div>
                 <div class="icon-levelUp-container">
-                    <a href="../levelUp/index.html"><img id="levelUpIcon-level3" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level3" class="icon-levelUp"
+                            src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
                 </div>
             </div>
-    
+
             <div id="level4-container">
                 <div id="data-container-containerLevel4">
                     <div class="data-container">
@@ -364,18 +414,25 @@
                             <p id="health-level4" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
-                            <svg id="healthVisualizer-level4" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="healthVisualizer-level4" class="data-lifetimeVisualizer" width="34" height="41"
+                                viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_107_146)">
-                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level4"/>
-                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level4"/>
-                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level4"/>
-                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level4"/>
-                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level4"/>
-                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level4"/>
+                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level4" />
+                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level4" />
+                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level4" />
+                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level4" />
+                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level4" />
+                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level4" />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_107_146">
-                                        <rect width="34" height="41"/>
+                                        <rect width="34" height="41" />
                                     </clipPath>
                                 </defs>
                             </svg>
@@ -385,7 +442,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="checkbox-health-container">
                     <input class="checkbox-health" type="checkbox" name="4" value="health1" />
                 </div>
@@ -393,10 +450,11 @@
                     <input class="checkbox-rewards" type="checkbox" name="4" value="rewards1" />
                 </div>
                 <div class="icon-levelUp-container">
-                    <a href="../levelUp/index.html"><img id="levelUpIcon-level4" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level4" class="icon-levelUp"
+                            src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
                 </div>
             </div>
-    
+
             <div id="level5-container">
                 <div id="data-container-containerLevel5">
                     <div class="data-container">
@@ -410,18 +468,25 @@
                             <p id="health-level5" class="data-lifetime">0d</p>
                         </div>
                         <div class="data-lifetimeVisualizer-container">
-                            <svg id="healthVisualizer-level5" class="data-lifetimeVisualizer" width="34" height="41" viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <svg id="healthVisualizer-level5" class="data-lifetimeVisualizer" width="34" height="41"
+                                viewBox="0 0 34 41" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                                 <g clip-path="url(#clip0_107_146)">
-                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level5"/>
-                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level5"/>
-                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level5"/>
-                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level5"/>
-                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level5"/>
-                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round" class="stroke-lifetimeVisualizer-level5"/>
+                                    <path d="M2 24V17" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level5" />
+                                    <path d="M8 27V14" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level5" />
+                                    <path d="M14 30V11" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level5" />
+                                    <path d="M20 8V33" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level5" />
+                                    <path d="M26 36V20.5V5" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level5" />
+                                    <path d="M32 39V2" stroke="white" stroke-width="4" stroke-linecap="round"
+                                        class="stroke-lifetimeVisualizer-level5" />
                                 </g>
                                 <defs>
                                     <clipPath id="clip0_107_146">
-                                        <rect width="34" height="41"/>
+                                        <rect width="34" height="41" />
                                     </clipPath>
                                 </defs>
                             </svg>
@@ -431,7 +496,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="checkbox-health-container">
                     <input class="checkbox-health" type="checkbox" name="5" value="health1" />
                 </div>
@@ -439,7 +504,8 @@
                     <input class="checkbox-rewards" type="checkbox" name="5" value="rewards1" />
                 </div>
                 <div class="icon-levelUp-container">
-                    <a href="../levelUp/index.html"><img id="levelUpIcon-level5" class="icon-levelUp" src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
+                    <a href="../levelUp/index.html"><img id="levelUpIcon-level5" class="icon-levelUp"
+                            src="../icons/levelUpIcon.svg" alt="Reward Icon"></a>
                 </div>
             </div>
 
@@ -516,7 +582,7 @@
                         <p><strong>Odin Name</strong></p>
                         <p><strong>#1234</strong></p>
                     </div> -->
-                </div>
+            </div>
             </div>
         </section>
 
@@ -601,4 +667,5 @@
         </div>
     </div>
 </body>
+
 </html>

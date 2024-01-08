@@ -138,9 +138,9 @@ let pressed4 = true;
 document.addEventListener('keypress', async (e) => {
     if (
         (e.key == 1 ||
-        e.key == 2 ||
-        e.key == 3 ||
-        e.key == 4) &&
+            e.key == 2 ||
+            e.key == 3 ||
+            e.key == 4) &&
         balanceTextLevel5.innerHTML != "/"
     ) {
         await allLevelUpgrades(e.key);
@@ -444,7 +444,7 @@ upgradeIcon.addEventListener('click', async () => {
     }
 
     if (IDs.length > 0) {
-        let tx = await signer_AvalancheValidatorHealthAndUpgradesFacet.upgradeAvalancheValidatorLevel(IDs, Upgrades, {gasLimit: 3_000_000});
+        let tx = await signer_AvalancheValidatorHealthAndUpgradesFacet.upgradeAvalancheValidatorLevel(IDs, Upgrades, { gasLimit: 3_000_000 });
         await tx.wait(1);
         await displaySupply();
     }
@@ -461,7 +461,7 @@ async function update(_address, _networkId) {
     }
     if (
         // (_networkId != "0xa86a" || _networkId != 43114 ) && _networkId != undefined
-        (_networkId != "0xa869" || _networkId != 43113 ) && _networkId != undefined // testnet
+        (_networkId != "0xa869" || _networkId != 43113) && _networkId != undefined // testnet
     ) {
         // window.ethereum.request({
         //     method: "wallet_addEthereumChain",
